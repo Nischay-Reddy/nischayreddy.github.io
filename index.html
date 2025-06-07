@@ -4,11 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nischay Reddy</title>
-
-  <!-- Bulma CSS via CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-
-  <!-- MathJax (for LaTeX math rendering) -->
   <script>
     MathJax = {
       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
@@ -16,33 +12,48 @@
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-
-  <!-- Custom Styling -->
   <style>
     body {
       font-family: 'Helvetica', sans-serif;
     }
-    .headshot {
-      max-width: 180px;
-      border-radius: 8px;
-      margin-left: 2rem;
-    }
-    /* Purple accent color stub — will customize later */
     .navbar {
-      background-color: #6a1b9a; /* deep purple */
+      background-color: #6a1b9a;
     }
     .navbar a.navbar-item {
       color: white;
     }
     .navbar a.navbar-item:hover {
-      background-color: #8e24aa; /* lighter purple */
+      background-color: #8e24aa;
+    }
+    h1, h2 {
+      color: #6a1b9a;
+    }
+    a {
+      color: #8e24aa;
+    }
+    .course-box {
+      border: 1px solid #ddd;
+      border-left: 5px solid #8e24aa;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: #fafafa;
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-menu is-active">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        Nischay Reddy
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarMain" class="navbar-menu is-active">
       <div class="navbar-start">
         <a class="navbar-item" href="index.html">Home</a>
         <a class="navbar-item" href="research.html">Research</a>
@@ -53,29 +64,31 @@
     </div>
   </nav>
 
-  <!-- Hero / Intro -->
   <section class="section">
-    <div class="container">
-      <div class="columns is-vcentered">
-        <div class="column is-two-thirds">
-          <h1 class="title is-2">Nischay Reddy</h1>
-          <h2 class="subtitle is-4">PhD Student in Pure Mathematics</h2>
-          <p>Email: <em>your.email@university.edu</em></p>
-          <p>
-            I’m a PhD student in algebraic number theory, focused on the \(p\)-adic Langlands program and its relatives in arithmetic geometry.
-          </p>
-          <p>
-            Here’s a random equation just to test MathJax: \( \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s} \)
-          </p>
-        </div>
-        <div class="column">
-          <figure class="image">
-            <img src="me.jpg" alt="Photo of Nischay" class="headshot">
-          </figure>
-        </div>
-      </div>
+    <div class="container content">
+      <h1 class="title">Welcome</h1>
+      <p>
+        I'm a PhD student in pure mathematics, working in the $p$-adic aspects of the Langlands Program.
+        This site includes my <a href="research.html">research</a>, <a href="teaching.html">teaching</a> materials, and <a href="notes.html">notes</a>.
+      </p>
+      <figure class="image is-128x128">
+        <img src="portrait.jpg" alt="Portrait of Nischay Reddy">
+      </figure>
     </div>
   </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.getElementById('navbarMain');
+
+      if (burger && menu) {
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('is-active');
+          menu.classList.toggle('is-active');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
-
