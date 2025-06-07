@@ -4,99 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nischay Reddy</title>
+
+  <!-- Bulma CSS via CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+
+  <!-- MathJax (for LaTeX math rendering) -->
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+  <!-- Custom Styling -->
   <style>
     body {
-      font-family: Georgia, serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      color: #333;
+      font-family: 'Helvetica', sans-serif;
     }
-
-    nav {
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 2rem;
-      padding-bottom: 0.5rem;
-    }
-
-    nav a {
-      margin-right: 1.5rem;
-      text-decoration: none;
-      color: #0055aa;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.2rem;
-    }
-
-    h2 {
-      margin-top: 2.5rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
-    }
-
-    img.headshot {
-      float: right;
-      margin-left: 1rem;
-      width: 180px;
+    .headshot {
+      max-width: 180px;
       border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin-left: 2rem;
     }
-
-    ul {
-      padding-left: 1.2rem;
+    /* Purple accent color stub — will customize later */
+    .navbar {
+      background-color: #6a1b9a; /* deep purple */
     }
-
-    .clear {
-      clear: both;
+    .navbar a.navbar-item {
+      color: white;
+    }
+    .navbar a.navbar-item:hover {
+      background-color: #8e24aa; /* lighter purple */
     }
   </style>
 </head>
 <body>
-
-  <nav>
-    <a href="#about">Home</a>
-    <a href="#research">Research</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#notes">Notes</a>
-    <a href="cv.pdf">CV</a>
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu is-active">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">Home</a>
+        <a class="navbar-item" href="research.html">Research</a>
+        <a class="navbar-item" href="teaching.html">Teaching</a>
+        <a class="navbar-item" href="notes.html">Notes</a>
+        <a class="navbar-item" href="cv.pdf">CV</a>
+      </div>
+    </div>
   </nav>
 
-  <h1>Nischay Reddy</h1>
-  <p>PhD Student in Pure Mathematics<br/>University of Toronto</p>
-
-  <img src="me.jpg" alt="Photo of Nischay" class="headshot" />
-
-  <p>Email: nischay.reddy@mail.utoronto.ca</p>
-
-  <div class="clear"></div>
-
-  <h2 id="about">About Me</h2>
-  <p>I study algebraic number theory. My research is on p-adic aspects of the Langlands program. I work with Florian Herzig.</p>
-
-  <h2 id="research">Research</h2>
-  <p>I’m broadly interested in:</p>
-  <ul>
-    <li>Galois representations</li>
-    <li>Arithmetic aspects of the Langlands program</li>
-    <li>Modularity and the cohomology of arithmetic groups</li>
-  </ul>
-  <h2 id="teaching">Teaching</h2>
-  <ul>
-
-  </ul>
-  <h2 id="notes">Notes</h2>
-  
-  <ul>
-  
-  </ul>
-
+  <!-- Hero / Intro -->
+  <section class="section">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-two-thirds">
+          <h1 class="title is-2">Nischay Reddy</h1>
+          <h2 class="subtitle is-4">PhD Student in Pure Mathematics</h2>
+          <p>Email: <em>your.email@university.edu</em></p>
+          <p>
+            I’m a PhD student in algebraic number theory, focused on the \(p\)-adic Langlands program and its relatives in arithmetic geometry.
+          </p>
+          <p>
+            Here’s a random equation just to test MathJax: \( \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s} \)
+          </p>
+        </div>
+        <div class="column">
+          <figure class="image">
+            <img src="me.jpg" alt="Photo of Nischay" class="headshot">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
+
