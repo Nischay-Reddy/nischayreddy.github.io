@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Teaching | Nischay Reddy</title>
+  <title>Nischay Reddy</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <script>
     MathJax = {
@@ -19,6 +19,7 @@
     .navbar a.navbar-item:hover { background-color: #8e24aa; }
     h1, h2 { color: #6a1b9a; }
     a { color: #8e24aa; }
+    .portrait { max-width: 200px; border-radius: 50%; }
   </style>
 </head>
 <body>
@@ -31,7 +32,7 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <div id="navbarMain" class="navbar-menu is-active">
+  <div id="navbarMain" class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item" href="index.html">Home</a>
       <a class="navbar-item" href="research.html">Research</a>
@@ -41,35 +42,24 @@
     </div>
   </div>
 </nav>
-
 <section class="section">
   <div class="container content">
     <h1 class="title">Teaching</h1>
-    <p>I have taught and assisted in various undergraduate and graduate courses related to mathematics.</p>
-
-    <h2 class="subtitle">Courses Taught</h2>
-    <ul>
-      <li>Introduction to Abstract Algebra (Undergraduate)</li>
-      <li>Number Theory (Undergraduate)</li>
-      <li>Algebraic Number Theory (Graduate)</li>
-      <li>Seminar on the Langlands Program (Graduate)</li>
-    </ul>
-
-    <h2 class="subtitle">Teaching Philosophy</h2>
-    <p>My teaching philosophy centers on fostering deep understanding through problem-solving and connecting abstract concepts to concrete examples. I aim to create an engaging and supportive learning environment.</p>
+    <img src="portrait.jpg" alt="Nischay Reddy" class="portrait">
+    <p>I have taught and assisted in various undergraduate and graduate courses. My teaching emphasizes conceptual clarity and problem-solving.</p>
   </div>
 </section>
-
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.navbar-burger');
-    const menu = document.getElementById('navbarMain');
-    if (burger && menu) {
-      burger.addEventListener('click', () => {
-        burger.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
+    const burgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    burgers.forEach(el => {
+      el.addEventListener('click', () => {
+        const targetId = el.dataset.target;
+        const target = document.getElementById(targetId);
+        el.classList.toggle('is-active');
+        target.classList.toggle('is-active');
       });
-    }
+    });
   });
 </script>
 </body>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Research | Nischay Reddy</title>
+  <title>Nischay Reddy</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <script>
     MathJax = {
@@ -19,6 +19,7 @@
     .navbar a.navbar-item:hover { background-color: #8e24aa; }
     h1, h2 { color: #6a1b9a; }
     a { color: #8e24aa; }
+    .portrait { max-width: 200px; border-radius: 50%; }
   </style>
 </head>
 <body>
@@ -31,7 +32,7 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <div id="navbarMain" class="navbar-menu is-active">
+  <div id="navbarMain" class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item" href="index.html">Home</a>
       <a class="navbar-item" href="research.html">Research</a>
@@ -41,38 +42,24 @@
     </div>
   </div>
 </nav>
-
 <section class="section">
   <div class="container content">
     <h1 class="title">Research</h1>
-    <p>My research focuses on Algebraic Number Theory and the Langlands Program, particularly the $p$-adic aspects.</p>
-
-    <h2 class="subtitle">Current Projects</h2>
-    <ul>
-      <li><strong>Project 1:</strong> Investigating local-global compatibility in the $p$-adic Langlands correspondence.</li>
-      <li><strong>Project 2:</strong> Exploring connections between Galois representations and automorphic forms.</li>
-      <li><strong>Project 3:</strong> Studying deformation theory and its applications to arithmetic geometry.</li>
-    </ul>
-
-    <h2 class="subtitle">Selected Publications</h2>
-    <ul>
-      <li><a href="#">Title of paper 1</a>, Journal Name, Year.</li>
-      <li><a href="#">Title of paper 2</a>, Journal Name, Year.</li>
-      <li><a href="#">Title of paper 3</a>, Journal Name, Year.</li>
-    </ul>
+    <img src="portrait.jpg" alt="Nischay Reddy" class="portrait">
+    <p>I work on problems at the intersection of algebraic number theory and representation theory, particularly those connected to the Langlands program.</p>
   </div>
 </section>
-
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.navbar-burger');
-    const menu = document.getElementById('navbarMain');
-    if (burger && menu) {
-      burger.addEventListener('click', () => {
-        burger.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
+    const burgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    burgers.forEach(el => {
+      el.addEventListener('click', () => {
+        const targetId = el.dataset.target;
+        const target = document.getElementById(targetId);
+        el.classList.toggle('is-active');
+        target.classList.toggle('is-active');
       });
-    }
+    });
   });
 </script>
 </body>
