@@ -18,16 +18,31 @@
     .navbar a.navbar-item { color: white; }
     .navbar a.navbar-item:hover { background-color: #8e24aa; }
     .navbar-menu { background-color: #6a1b9a; padding: 0.5rem; }
-    .navbar-menu a.navbar-item { color: white; }
     h1, h2 { color: #6a1b9a; }
     a { color: #8e24aa; }
+
     .portrait {
-      max-width: 350px;
-      width: 100%;
+      max-width: 300px;
       height: auto;
       border-radius: 50%;
       display: block;
-      margin-bottom: 1rem;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .intro-text {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero {
+      padding: 4rem 1.5rem;
+    }
+
+    .hero .title {
+      font-size: 2.5rem;
     }
   </style>
 </head>
@@ -51,19 +66,18 @@
     </div>
   </div>
 </nav>
-<section class="section">
-  <div class="container content">
-    <h1 class="title">Welcome</h1>
-    <div class="columns is-vcentered">
-      <div class="column is-one-third">
-        <img src="me.jpg" alt="Portrait of Nischay Reddy" class="portrait" />
-      </div>
-      <div class="column">
-        <p>Hello! I'm Nischay Reddy, a math PhD student at the University of Toronto. I am an algebraic number theorist, working on mostly p-adic aspects of the Langlands program. My advisor is Florian Herzig. I love Galois Representations :)</p>
-      </div>
-    </div>
+
+<section class="hero is-light is-fullheight-with-navbar">
+  <div class="hero-body is-flex is-flex-direction-column is-align-items-center">
+    <img src="me.jpg" alt="Portrait of Nischay Reddy" class="portrait" />
+    <h1 class="title has-text-centered">Welcome!</h1>
+    <p class="intro-text">
+      I'm Nischay Reddy, a math PhD student at the University of Toronto. I work in algebraic number theory,
+      with a focus on $p$-adic aspects of the Langlands program. My advisor is Florian Herzig. I love Galois Representations :)
+    </p>
   </div>
 </section>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.navbar-burger');
