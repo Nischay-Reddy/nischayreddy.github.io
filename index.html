@@ -106,22 +106,33 @@
 </nav>
 
 <section class="section main-section">
-  <div class="container content has-text-centered">
-    <h1 class="title is-3">Welcome</h1>
-    <img src="me.jpg" alt="Portrait of Nischay Reddy" class="portrait" />
-    <h2 class="title is-4">Nischay Reddy</h2>
-    <blockquote class="quote">
-      “Fourier believed that the main
-      goals of mathematics were to serve the common good and to explain
-      natural phenomena. However, a philosopher like him should have
-      known that science is solely <strong>for the honor of the human spirit</strong>. Therefore a question about numbers is as important as a question about the
-      world.".”
-      <br><span class="quote-attrib">— Jacobi, 1830</span>
-    </blockquote>
+  <div class="container">
+    <h1 class="title has-text-centered is-3">Welcome</h1>
+    <div class="columns is-vcentered is-centered">
+      <!-- Left Column: Bio -->
+      <div class="column is-4 has-text-left">
+        <h2 class="title is-4">Nischay Reddy</h2>
+        <p>
+          I'm a Math PhD student at the University of Toronto. I am an algebraic number theorist, working on p-adic aspects of the Langlands program. My advisor is Florian Herzig. I love Galois Representations :)
+        </p>
+      </div>
 
-    <p>Hello! I'm Nischay Reddy, a math PhD student at the University of Toronto. I am an algebraic number theorist, working on mostly p-adic aspects of the Langlands program. My advisor is Florian Herzig. I love Galois Representations :)</p>
+      <!-- Middle Column: Portrait -->
+      <div class="column is-3 has-text-centered">
+        <img src="me.jpg" alt="Portrait of Nischay Reddy" class="portrait" />
+      </div>
+
+      <!-- Right Column: Quote -->
+      <div class="column is-4 has-text-left">
+        <blockquote class="quote">
+          “Fourier believed that the main goals of mathematics were to serve the common good and to explain natural phenomena. However, a philosopher like him should have known that science is solely <strong>for the honor of the human spirit</strong>. Therefore a question about numbers is as important as a question about the world.”
+          <br><span class="quote-attrib">— Jacobi, 1830</span>
+        </blockquote>
+      </div>
+    </div>
   </div>
 </section>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
