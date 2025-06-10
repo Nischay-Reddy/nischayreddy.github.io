@@ -13,51 +13,62 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
   <style>
-    body { font-family: 'Helvetica', sans-serif; }
-    .navbar { background-color: #6a1b9a; }
-    .navbar a.navbar-item { color: white; }
-    .navbar a.navbar-item:hover { background-color: #8e24aa; }
-    .navbar-menu { background-color: #6a1b9a; padding: 0.5rem; }
-    h1, h2 { color: #6a1b9a; }
-    a { color: #8e24aa; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      height: 100%;
+      font-family: 'Helvetica', sans-serif;
+    }
+
+    .navbar {
+      background-color: #6a1b9a;
+    }
+
+    .navbar a.navbar-item {
+      color: white;
+    }
+
+    .navbar a.navbar-item:hover {
+      background-color: #8e24aa;
+    }
+
+    .navbar-menu {
+      background-color: #6a1b9a;
+      padding: 0.5rem;
+    }
+
+    .navbar-menu a.navbar-item {
+      color: white;
+    }
+
+    h1, h2 {
+      color: #6a1b9a;
+    }
+
+    a {
+      color: #8e24aa;
+    }
 
     .portrait {
-      max-width: 300px;
+      max-width: 350px;
+      width: 100%;
       height: auto;
       border-radius: 50%;
       display: block;
-      margin: 0 auto 1.5rem auto;
+      margin: 0 auto 1rem auto;
     }
 
-    .intro-text {
-      font-size: 1.25rem;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto;
+    .main-section {
+      min-height: calc(100vh - 3.25rem); /* Adjust for navbar height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .has-text-centered {
       text-align: center;
     }
-
-    .hero {
-      padding: 4rem 1.5rem;
-    }
-
-    .hero .title {
-      font-size: 2.5rem;
-    }
-    .quote {
-  font-style: italic;
-  color: #444;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  max-width: 600px;
-    }
-    .quote-attrib {
-      display: block;
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
   </style>
 </head>
 <body>
@@ -81,23 +92,14 @@
   </div>
 </nav>
 
-<section class="hero is-light is-fullheight-with-navbar">
-  <div class="hero-body is-flex is-flex-direction-column is-align-items-center has-text-centered">
-    <h1 class="title">Welcome!</h1>
+<section class="section main-section">
+  <div class="container content has-text-centered">
+    <h1 class="title is-3">Welcome</h1>
     <img src="me.jpg" alt="Portrait of Nischay Reddy" class="portrait" />
-    <h2 class="title is-3" style="margin-top: 1rem;">Nischay Reddy</h2>
-    <blockquote class="quote">
-      “Mathematics exists for the <strong>honour of the human spirit</strong>.”
-      <br><span class="quote-attrib">— Jacobi (quoted by Weil)</span>
-    </blockquote>
-
-    <p class="intro-text">
-      I'm a Math PhD student at the University of Toronto. I work in algebraic number theory,
-      focusing on $p$-adic aspects of the Langlands program. My advisor is Florian Herzig. I love Galois Representations :)
-    </p>
+    <h2 class="title is-4">Nischay Reddy</h2>
+    <p>Hello! I'm Nischay Reddy, a math PhD student at the University of Toronto. I am an algebraic number theorist, working on mostly p-adic aspects of the Langlands program. My advisor is Florian Herzig. I love Galois Representations :)</p>
   </div>
 </section>
-
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
