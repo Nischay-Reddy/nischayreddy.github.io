@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nischay Reddy</title>
+  <title>Notes – Nischay Reddy</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <script>
     MathJax = {
@@ -13,21 +13,47 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
   <style>
-    body { font-family: 'Helvetica', sans-serif; }
-    .navbar { background-color: #6a1b9a; }
-    .navbar a.navbar-item { color: white; }
-    .navbar a.navbar-item:hover { background-color: #8e24aa; }
-    .navbar-menu { background-color: #6a1b9a; padding: 0.5rem; }
-    .navbar-menu a.navbar-item { color: white; }
-    h1, h2 { color: #6a1b9a; }
-    a { color: #8e24aa; }
-    .portrait { max-width: 200px; border-radius: 50%; }
-    .navbar { background-color: #6a1b9a; }
-    .navbar a.navbar-item { color: white; }
-    .navbar a.navbar-item:hover { background-color: #8e24aa; }
-    h1, h2 { color: #6a1b9a; }
-    a { color: #8e24aa; }
-    .portrait { max-width: 200px; border-radius: 50%; }
+    body {
+      font-family: 'Helvetica', sans-serif;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background-color: #6a1b9a;
+    }
+    .navbar a.navbar-item {
+      color: white;
+    }
+    .navbar a.navbar-item:hover {
+      background-color: #8e24aa;
+    }
+    h1, h2 {
+      color: #6a1b9a;
+    }
+    a {
+      color: #8e24aa;
+    }
+    .notes-image {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 1rem;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+    .quote {
+      font-style: italic;
+      color: #444;
+      margin: 2rem auto;
+      max-width: 600px;
+    }
+    .quote-attrib {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #888;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
@@ -61,30 +87,38 @@
     </div>
   </nav>
 
-<section class="section">
-  <div class="container content">
-    <h1 class="title">Notes</h1>
-    <img src="portrait.jpg" alt="Nischay Reddy" class="portrait">
-    <ul>
-<!--
-<li><a href='notes/moduli.pdf'>Moduli Spaces – Introductory Notes (PDF)</a></li>
-<li><a href='notes/idele_class_group.pdf'>Idèle Class Group Quick Reference (PDF)</a></li>
-<li><a href='notes/padic_langlands.pdf'>Notes on the $p$-adic Langlands Program (PDF)</a></li>
-</ul>
--->
-  </div>
-</section>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.navbar-burger');
-    const menu = document.getElementById('navbarMain');
-    if (burger && menu) {
-      burger.addEventListener('click', () => {
+
+  <section class="section">
+    <div class="container has-text-centered content">
+      <h1 class="title">Notes</h1>
+
+      <!-- Centered image -->
+      <img src="your-note-image.jpg" alt="Notes illustration" class="notes-image" />
+
+      <!-- Centered quote -->
+      <blockquote class="quote">
+        The world of ideas is not revealed to us in one stroke; we must both permanently and unceasingly recreate it in our consciousness.
+        <span class="quote-attrib">— René Thom</span>
+      </blockquote>
+
+      <!-- Your list of notes -->
+      <ul>
+        <li><a href="notes/moduli.pdf">Moduli Spaces – Introductory Notes (PDF)</a></li>
+        <li><a href="notes/idele_class_group.pdf">Idèle Class Group Quick Reference (PDF)</a></li>
+        <li><a href="notes/padic_langlands.pdf">Notes on the $p$-adic Langlands Program (PDF)</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu   = document.getElementById('navbarMain');
+      burger?.addEventListener('click', () => {
         burger.classList.toggle('is-active');
         menu.classList.toggle('is-active');
       });
-    }
-  });
-</script>
+    });
+  </script>
 </body>
 </html>
