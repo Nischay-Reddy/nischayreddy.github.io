@@ -54,6 +54,21 @@
       color: #888;
       text-align: right;
     }
+      /* New styles for per-note comments */
+    .note-item {
+      max-width: 600px;
+      margin: 1.5rem auto;
+      text-align: left;           /* override the page’s has-text-centered */
+    }
+    .note-item a {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .note-item .note-comment {
+      margin-top: 0.5rem;
+      color: #555;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
@@ -92,19 +107,27 @@
     <div class="container has-text-centered content">
       <h1 class="title">Notes</h1>
 
-      <!-- Centered image -->
+
+            <!-- 1. Your list of notes, each in its own box with a spot for comments -->
+      <div class="note-list">
+        <div class="box note-item">
+          <a href="notes/moduli.pdf">Reducing Crystalline Represenations modulo p (PDF)</a>
+          <p class="note-comment">
+            <!-- Write your comment about this note here -->
+            This is a note on Kevin Buzzard and Toby Gee's paper Explicit Reduction Modulo p of Certain 2-Dimensional Crystalline Representations I, 2009.
+            The process of writing this was useful, whether it will serve any other purpose is unclear.
+          </p>
+        </div>
+        
+            <!-- Centered image -->
       <img src="your-note-image.jpg" alt="Notes illustration" class="notes-image" />
 
+  
       <!-- Centered quote -->
       <blockquote class="quote">
         The world of ideas is not revealed to us in one stroke; we must both permanently and unceasingly recreate it in our consciousness.
         <span class="quote-attrib">— René Thom</span>
       </blockquote>
-
-      <!-- Your list of notes -->
-      <ul>
-        <li><a href="notes/idele_class_group.pdf">Buzzard and Gee's Reduction mod p (PDF)</a></li>
-      </ul>
     </div>
   </section>
 
